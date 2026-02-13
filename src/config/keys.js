@@ -13,7 +13,7 @@ function getJwks() {
       {
         ...exported,
         use: "sig",
-        kid: process.env.JWT_KID,
+        kid: process.env.JWT_KID || 'customer-auth-key-1',
         alg: "RS256"
       }
     ]
